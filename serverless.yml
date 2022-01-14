@@ -1,0 +1,20 @@
+service: webpack-build
+
+provider:
+  name: aws
+  region: ${env:REGION, 'us-west-2'}
+  stage: ${opt:stage, 'dev'}
+  runtime: nodejs14.x
+  memorySize: 256
+  timeout: 30
+
+plugins:
+  - serverless-webpack
+
+functions:
+  webpack:
+    handler: src/handlers/webpack/index.handler
+    events:
+      - http:
+          path: /hello
+          method: get
