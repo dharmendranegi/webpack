@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/dharmendranegi/webpack#readme",
   "dependencies": {
-    "uuid4": "^2.0.2"
+    "uuid4": "^2.0.2",
+    "uuidv4": "^6.2.12"
   },
   "devDependencies": {
     "serverless-webpack": "^5.6.0",
