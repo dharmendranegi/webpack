@@ -7,6 +7,11 @@ provider:
   runtime: nodejs14.x
   memorySize: 256
 
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+
 plugins:
   - serverless-webpack
 
